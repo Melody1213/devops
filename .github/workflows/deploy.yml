@@ -28,8 +28,6 @@ jobs:
       run: ng build --configuration production
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+      uses: angular-schule/gh-pages-deploy@v0.3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/mon-appli
-
+        dir: dist/mon-appli
