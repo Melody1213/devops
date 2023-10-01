@@ -1,0 +1,28 @@
+name: Lint Code
+
+# Exécuter le workflow pour chaque pull request
+on: pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js 16.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+
+
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+
+    - name: Run Angular Lint
+      run: ng lint
