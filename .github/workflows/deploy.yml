@@ -22,14 +22,14 @@ jobs:
       
     - name: Install Angular CLI
       run: npm install -g @angular/cli
-
-    - name: Build
-      run: ng build --prod
-
+      
+  
+    - name: Build Project
+      run: ng build --configuration production
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/mon-appli
+        publish_dir: dist/mon-appli
 
