@@ -26,4 +26,4 @@ jobs:
     - name: Deploy
       uses: angular-schule/gh-pages-deploy@v0.3
       with:
-        dir: dist/mon-application
+        dir: dist/mon-appli
